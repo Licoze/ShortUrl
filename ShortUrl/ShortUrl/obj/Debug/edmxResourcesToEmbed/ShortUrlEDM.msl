@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShortUrlModelStoreContainer" CdmEntityContainer="ShortUrlEntities">
+    <EntitySetMapping Name="Main">
+      <EntityTypeMapping TypeName="ShortUrlModel.Main">
+        <MappingFragment StoreEntitySet="Main">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="original_url" ColumnName="original_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

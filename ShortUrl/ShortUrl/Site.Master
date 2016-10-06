@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ShortUrl.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="Content/main.css" type="text/css" />
+    <%: Styles.Render("~/bundle/Bootstrap")%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     
+    <form id="mainform" runat="server">
+        <asp:ScriptManager ID="script_mngr" runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="Jquery"/>
+                <asp:ScriptReference Name="JqueryValid"/>
+                <asp:ScriptReference Name="Bootstrap"/>  
+                <asp:ScriptReference Name="General"/>
+            </Scripts>
+            <Services>
+                <asp:ServiceReference Path="~/Services/Processing.asmx" />
+            </Services>
+        </asp:ScriptManager>
+   <div class="navbar navbar-static-top  header">
+   <div class="container-fluid">
+       
+           <h1>ShortUrl</h1>
+
+       </div>
+   </div>   
+  <div class="container content">
+        <asp:ContentPlaceHolder ID="inputform" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  </div>
+     
+
+         <div class="navbar navbar-fixed-bottom footer">
+             <div class="container-fluid">
+             <small>Created by <a href="https://github.com/licoze"><b> Vladislav Melnik</b></a>|2016</small>
+         </div>
+             
+     </div>
+    
+ 
+    </form>
+ 
+</body>
+</html>
